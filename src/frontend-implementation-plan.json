@@ -1,0 +1,66 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Fixed vs Variable expense classification (UI, filtering, reporting)",
+  "requirements": [
+    {
+      "id": "REQ-16",
+      "summary": "Add required Fixed vs Variable selection to Expense add/edit flow and display the classification in the expenses list.",
+      "acceptanceCriteria": [
+        "In the Add Expense / Edit Expense dialog, a required input allows choosing between Fixed and Variable.",
+        "When an expense is saved, the selected classification is sent to the backend and is preserved when reloading the list.",
+        "The expense entries table shows each expense’s classification (e.g., a badge or column) using English labels “Fixed” and “Variable”.",
+        "All user-facing text added for this feature is in English."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useExpenses.ts",
+          "operation": "modify",
+          "description": "Update expense create/update mutations to include the ExpenseType classification parameter when calling backend createExpenseEntry/updateExpenseEntry, and update local mutation input typing accordingly."
+        },
+        {
+          "path": "frontend/src/pages/ExpensesPage.tsx",
+          "operation": "modify",
+          "description": "Use existing shadcn-ui Select, Table, and Badge components to (1) add a required Expense Type control (Fixed/Variable) to the Add/Edit dialog, (2) include expenseType in form state, validation, edit prefill, and submit payloads, and (3) show the classification in the expense entries table (new column or badge) using English labels “Fixed” and “Variable”. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "summary": "Add an expense classification filter (All/Fixed/Variable) to the Expenses page filters area and ensure Clear Filters resets it.",
+      "acceptanceCriteria": [
+        "The Expenses filter area includes a new filter control for expense classification with options: All, Fixed, Variable.",
+        "Selecting Fixed shows only fixed-classified expenses; selecting Variable shows only variable-classified expenses; selecting All shows both.",
+        "“Clear Filters” resets the classification filter back to All (along with the existing date/category filters)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ExpensesPage.tsx",
+          "operation": "modify",
+          "description": "Use an existing shadcn-ui Select control in the existing Filters card (same grid area as current date/category filters) to add an Expense Type filter with options All/Fixed/Variable; apply filtering to the already date/category-filtered list; ensure Clear Filters resets classification back to All along with other filters. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "summary": "Compute and display Fixed vs Variable expense totals in Profit & Loss reports while keeping existing totals and category breakdown.",
+      "acceptanceCriteria": [
+        "When generating a report, the app computes (for the selected date range) total fixed expenses and total variable expenses in addition to total expenses.",
+        "The Reports page displays the fixed vs variable totals in English in a clear summary section (format consistent with existing report cards/tables).",
+        "Existing category breakdown remains available and continues to work after adding the classification field."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useProfitAndLoss.ts",
+          "operation": "modify",
+          "description": "Extend report calculation to compute total fixed expenses and total variable expenses for the selected date range (in addition to existing totals), and return these values in the hook’s report state while keeping the existing category breakdown logic."
+        },
+        {
+          "path": "frontend/src/pages/ReportsPage.tsx",
+          "operation": "modify",
+          "description": "Extend the existing summary section (Card-based layout) to display Fixed Expenses and Variable Expenses totals in English, consistent with existing report cards/tables, while preserving the existing Total Sales, Total Expenses, Net Profit/Loss, and category breakdown table. Verify the component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}

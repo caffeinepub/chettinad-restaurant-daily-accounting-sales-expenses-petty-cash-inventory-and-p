@@ -1,0 +1,61 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-expenses-ui-to-allow-selecting-fixed-vs-variable-when-creating-or-editing-an-expense-and-display-the-classification-in-the-expense-entries-list",
+      "featureTitle": "Update the Expenses UI to allow selecting Fixed vs Variable when creating or editing an expense, and display the classification in the expense entries list.",
+      "files": [
+        "frontend/src/hooks/useExpenses.ts",
+        "frontend/src/pages/ExpensesPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-16"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-filtering-in-the-expenses-page-to-view-all-expenses-only-fixed-expenses-or-only-variable-expenses-applying-the-filter-in-the-existing-filters-area-corresponding-to-the-selected-element-html-body-div-div-main-div-div-2-div-2-div-1-div-2",
+      "featureTitle": "Add filtering in the Expenses page to view All expenses, only Fixed expenses, or only Variable expenses, applying the filter in the existing filters area corresponding to the selected element (/html/body/div/div/main/div/div[2]/div[2]/div[1]/div[2]).",
+      "files": [
+        "frontend/src/pages/ExpensesPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-17"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-profit-loss-reporting-calculations-to-compute-and-show-totals-for-fixed-expenses-and-variable-expenses-for-the-selected-date-range",
+      "featureTitle": "Update Profit & Loss reporting calculations to compute and show totals for Fixed expenses and Variable expenses for the selected date range.",
+      "files": [
+        "frontend/src/hooks/useProfitAndLoss.ts",
+        "frontend/src/pages/ReportsPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-18"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

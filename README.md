@@ -1,2 +1,3 @@
-# chettinad-restaurant-daily-accounting-sales-expenses-petty-cash-inventory-and-p
-Exported from Caffeine project: Chettinad Restaurant Daily Accounting: Sales, Expenses, Petty Cash, Inventory, and P&amp;L
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

@@ -1,0 +1,19 @@
+{
+  "frontend/src/App.tsx": "Main application component with page routing, theme provider, query client, and toast notifications.",
+  "frontend/src/components/AppShell.tsx": "Reusable app shell with header displaying Sikandar Indian Restaurant logo and branding, navigation menu, mobile sheet menu, and footer with caffeine.ai attribution.",
+  "frontend/src/pages/DashboardPage.tsx": "Dashboard landing page with hero section using background pattern, module navigation cards, and quick stats overview.",
+  "frontend/src/pages/SalesPage.tsx": "Sales management page with add/edit/delete functionality, date filtering, summary totals, and data table.",
+  "frontend/src/pages/ExpensesPage.tsx": "Expenses management page with category/payment method/expense type selection, date/category/type filtering, edit/delete actions, and totals display with Fixed/Variable classification badges in the table.",
+  "frontend/src/pages/PettyCashPage.tsx": "Petty cash ledger with prominent balance display, cash in/out transactions, date filtering, and transaction history table.",
+  "frontend/src/pages/InventoryPage.tsx": "Inventory management with items list, stock levels, low-stock highlighting, stock movement recording, and tabbed interface.",
+  "frontend/src/pages/ReportsPage.tsx": "Profit & loss reporting with date range selection, summary cards for sales/expenses/net profit, fixed vs variable expense breakdown cards, and expense breakdown by category table.",
+  "frontend/src/hooks/useSales.ts": "React Query hooks for sales CRUD operations with cache invalidation.",
+  "frontend/src/hooks/useExpenses.ts": "React Query hooks for expenses CRUD operations including expenseType parameter in create/update mutations with cache invalidation.",
+  "frontend/src/hooks/usePettyCash.ts": "React Query hooks for petty cash transactions with computed balance from ledger.",
+  "frontend/src/hooks/useInventory.ts": "React Query hooks for inventory items and stock movements with computed stock levels per item.",
+  "frontend/src/hooks/useProfitAndLoss.ts": "Custom hook for profit & loss reporting with date filtering, fixed/variable expense totals computation, and category breakdown.",
+  "frontend/src/lib/dateUtils.ts": "Utility functions for date conversion between input formats, YYYYMMDD bigint, and display formats with filtering helpers.",
+  "frontend/src/components/ConfirmDialog.tsx": "Reusable confirmation dialog component for destructive actions using AlertDialog.",
+  "frontend/src/index.css": "Global styles with warm Chettinad-inspired OKLCH color palette (terracotta, saffron, cream, charcoal) for light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration with custom fonts (Poppins display), extended color tokens, and custom shadows for the Chettinad theme."
+}

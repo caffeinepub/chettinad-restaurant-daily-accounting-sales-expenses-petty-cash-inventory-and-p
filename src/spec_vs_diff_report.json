@@ -1,0 +1,63 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-08T16:07:44.185Z",
+  "summary": "Implemented an ExpenseType classification with migration support and added frontend plumbing for expenseType in expenses CRUD and profit & loss calculations. However, some acceptance criteria are not clearly met from the diff excerpts (notably backend API exposure details, expenses-page filter UI/clear-reset behavior), and the backend enum variants appear lowercase (#fixed/#variable) rather than exactly “Fixed”/“Variable” as specified.",
+  "missing_requirements": [
+    {
+      "id": "REQ-15",
+      "requirement": "Backend defines an ExpenseType (or equivalent) with exactly two values: Fixed and Variable.",
+      "reason": "The diff shows the enum variants as lowercase (#fixed, #variable) rather than exactly “Fixed” and “Variable” as stated in the acceptance criteria.",
+      "evidence": [
+        "backend/main.mo",
+        "backend/migration.mo"
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "requirement": "ExpenseEntry includes the new classification field and it is returned by getAllExpenseEntries/getExpenseEntry; createExpenseEntry and updateExpenseEntry accept the classification field and persist it with the entry.",
+      "reason": "Although the frontend now calls createExpenseEntry/updateExpenseEntry with an expenseType argument, the backend method signatures and return payloads for getAllExpenseEntries/getExpenseEntry are not shown in the provided (truncated) backend diff, so the API exposure/persistence cannot be confirmed from evidence.",
+      "evidence": [
+        "backend/main.mo (truncated)",
+        "frontend/src/hooks/useExpenses.ts"
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "requirement": "In the Add Expense / Edit Expense dialog, a required input allows choosing between Fixed and Variable; the expense entries table shows each expense’s classification using English labels “Fixed” and “Variable”.",
+      "reason": "The diff excerpt shows state/labels for expenseType and filtering logic, but the actual dialog control and table column/badge rendering are not present in the truncated snippet, so this cannot be confirmed from the provided evidence.",
+      "evidence": [
+        "frontend/src/pages/ExpensesPage.tsx (truncated)"
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "requirement": "Expenses filter area includes a new classification filter control with options All, Fixed, Variable; “Clear Filters” resets the classification filter back to All.",
+      "reason": "Filtering state (expenseTypeFilter) and filtering logic exist, but the UI control placement in the specified filters area and the Clear Filters reset behavior are not shown in the truncated diff excerpt.",
+      "evidence": [
+        "frontend/src/pages/ExpensesPage.tsx (truncated)"
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "requirement": "Reports page displays the fixed vs variable totals in English in a clear summary section (format consistent with existing report cards/tables).",
+      "reason": "The hook computes fixedExpenses/variableExpenses, but the provided ReportsPage diff excerpt is truncated before any fixed/variable UI is shown, so display cannot be confirmed from the code shown.",
+      "evidence": [
+        "frontend/src/hooks/useProfitAndLoss.ts",
+        "frontend/src/pages/ReportsPage.tsx (truncated)"
+      ]
+    }
+  ],
+  "hallucinated_features": [],
+  "confidence": 0.62,
+  "changed_files": [
+    "backend/main.mo",
+    "backend/migration.mo",
+    "frontend-file-summaries.txt",
+    "frontend/src/hooks/useExpenses.ts",
+    "frontend/src/hooks/useProfitAndLoss.ts",
+    "frontend/src/pages/ExpensesPage.tsx",
+    "frontend/src/pages/ReportsPage.tsx",
+    "project_state.json"
+  ]
+}

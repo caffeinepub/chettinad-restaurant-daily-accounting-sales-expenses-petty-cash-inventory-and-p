@@ -1,0 +1,203 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Build an app for an Indian Chettinad restaurant to manage daily sales, expenses, petty cash, inventory, and profit & loss reporting.",
+  "architectural_notes": [
+    "Expenses entries should include a classification field (Fixed vs Variable) and reporting/UI should support filtering and totals by this classification."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-build-a-frontend-ui-with-navigation-for-dashboard-sales-expenses-petty-cash-inventory-and-reports-each-section-must-allow-adding-new-records-and-viewing-lists-with-date-filtering",
+      "title": "Build a frontend UI with navigation for: Dashboard, Sales, Expenses, Petty Cash, Inventory, and Reports. Each section must allow adding new records and viewing lists with date filtering.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-frontend-workflows-for-editing-and-deleting-sales-and-expenses-entries-with-confirmation-prompts-and-success-error-toasts",
+      "title": "Implement frontend workflows for editing and deleting Sales and Expenses entries with confirmation prompts and success/error toasts.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-frontend-petty-cash-ledger-ui-add-cash-in-out-transactions-show-current-balance-prominently-and-show-a-transaction-list-filtered-by-date-range",
+      "title": "Implement frontend petty cash ledger UI: add cash IN/OUT transactions, show current balance prominently, and show a transaction list filtered by date range.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-frontend-inventory-ui-manage-item-master-list-add-edit-record-stock-movements-per-item-and-display-current-stock-levels-with-low-stock-highlighting",
+      "title": "Implement frontend inventory UI: manage item master list (add/edit), record stock movements per item, and display current stock levels with low-stock highlighting.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-frontend-profit-loss-reporting-ui-for-a-selected-date-range-show-total-sales-total-expenses-net-profit-loss-and-expense-totals-by-category",
+      "title": "Implement frontend Profit & Loss reporting UI: for a selected date range show total sales, total expenses, net profit/loss, and expense totals by category.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-visual-theme-suitable-for-an-indian-chettinad-restaurant-ledger-app-using-warm-earthy-colors-no-blue-purple-as-primary-clear-typography-and-a-clean-form-first-layout-that-is-consistent-across-all-pages",
+      "title": "Apply a cohesive visual theme suitable for an Indian Chettinad restaurant ledger app, using warm earthy colors (no blue/purple as primary), clear typography, and a clean form-first layout that is consistent across all pages.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-include-basic-brand-assets-as-static-images-and-use-them-in-the-ui-e-g-app-logo-in-header-and-a-subtle-background-pattern-on-auth-free-landing-dashboard-screens-by-placing-them-under-frontend-public-assets-generated",
+      "title": "Generate and include basic brand assets as static images and use them in the UI (e.g., app logo in header and a subtle background pattern on auth-free landing/dashboard screens) by placing them under frontend/public/assets/generated.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-user-uploaded-logo-image-file-s-restaurant-1-png-and-restaurant-1-1-png-to-the-frontend-static-assets-and-update-the-app-header-to-display-the-uploaded-logo-instead-of-the-currently-referenced-generated-logo-assets-generated-chettinad-logo-dim-512x512-png",
+      "title": "Add the user-uploaded logo image file(s) (Restaurant_1.png and Restaurant_1-1.png) to the frontend static assets and update the app header to display the uploaded logo instead of the currently referenced generated logo (/assets/generated/chettinad-logo.dim_512x512.png).",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-updated-header-logo-includes-appropriate-accessible-alt-text-in-english-that-matches-the-restaurant-branding-shown-in-the-uploaded-logo-image",
+      "title": "Ensure the updated header logo includes appropriate accessible alt text in English that matches the restaurant branding shown in the uploaded logo image.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-expenses-ui-to-allow-selecting-fixed-vs-variable-when-creating-or-editing-an-expense-and-display-the-classification-in-the-expense-entries-list",
+      "title": "Update the Expenses UI to allow selecting Fixed vs Variable when creating or editing an expense, and display the classification in the expense entries list.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-filtering-in-the-expenses-page-to-view-all-expenses-only-fixed-expenses-or-only-variable-expenses-applying-the-filter-in-the-existing-filters-area-corresponding-to-the-selected-element-html-body-div-div-main-div-div-2-div-2-div-1-div-2",
+      "title": "Add filtering in the Expenses page to view All expenses, only Fixed expenses, or only Variable expenses, applying the filter in the existing filters area corresponding to the selected element (/html/body/div/div/main/div/div[2]/div[2]/div[1]/div[2]).",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-profit-loss-reporting-calculations-to-compute-and-show-totals-for-fixed-expenses-and-variable-expenses-for-the-selected-date-range",
+      "title": "Update Profit & Loss reporting calculations to compute and show totals for Fixed expenses and Variable expenses for the selected date range.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Track and record daily sales for the restaurant",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Track and record daily expenses",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Manage petty cash (entries, withdrawals, balance)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Inventory management for restaurant items (stock in/out, current levels)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Generate profit & loss reporting based on sales, expenses, and inventory",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Create a backend data model and CRUD APIs to record daily sales entries for the restaurant, including date, total amount, optional notes, and created/updated timestamps.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Create a backend data model and CRUD APIs to record daily expense entries, including date, category, amount, payment method (e.g., cash/bank), optional notes, and created/updated timestamps.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Implement petty cash management in the backend with a ledger of transactions (cash in/cash out) and a computed current balance. Each transaction must include date/time, type (IN/OUT), amount, reason/notes, and created/updated timestamps.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Implement inventory management in the backend for restaurant items, including item master data (name, unit, optional low-stock threshold) and stock movement transactions (stock in, stock out, adjustments) with date/time, quantity, and notes.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Implement backend Profit & Loss reporting APIs that compute totals for a selected date range: total sales, total expenses, net profit/loss, and optionally a category breakdown for expenses.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Add the user-provided logo asset to the app (use it in the header/branding in place of or alongside the generated logo)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Enhance Expenses tracking to support separating/classifying expenses as Fixed vs Variable (for entry and reporting/filtering)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Extend the ExpenseEntry data model to include an expense classification field that distinguishes Fixed expenses from Variable expenses, and expose this field through the backend API used by the frontend.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Chettinad Restaurant Daily Accounting: Sales, Expenses, Petty Cash, Inventory, and P&L",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
